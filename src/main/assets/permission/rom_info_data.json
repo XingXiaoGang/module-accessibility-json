@@ -1,0 +1,377 @@
+{
+  "version": 3,
+  "rom_items": [
+    {
+      "rom_id": 1,
+      "rom_name": "samsung",
+      "feature_items": [
+        {
+          "key": "MANUFACTURER",
+          "value": "samsung",
+          "condition": "equal"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "20",
+          "condition": "greater"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "23",
+          "condition": "less"
+        }
+      ]
+    },
+    {
+      "rom_id": 101,
+      "rom_name": "samsung",
+      "feature_items": [
+        {
+          "key": "MANUFACTURER",
+          "value": "samsung",
+          "condition": "equal"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "23",
+          "condition": "equal"
+        }
+      ]
+    },
+    {
+      "rom_id": 102,
+      "rom_name": "samsung",
+      "feature_items": [
+        {
+          "key": "MANUFACTURER",
+          "value": "samsung",
+          "condition": "equal"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "18",
+          "condition": "ge"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "19",
+          "condition": "le"
+        }
+      ]
+    },
+    {
+      "rom_id": 2,
+      "rom_name": "XiaomiV7-5.0",
+      "feature_items": [
+        {
+          "key": "MANUFACTURER",
+          "value": "Xiaomi",
+          "condition": "equal"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "18",
+          "condition": "greater"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "23",
+          "condition": "less"
+        },
+        {
+          "key": "ro.miui.ui.version.name",
+          "value": "V7",
+          "condition": "equal"
+        }
+      ]
+    },
+    {
+      "rom_id": 201,
+      "rom_name": "XiaomiV7-6.0",
+      "feature_items": [
+        {
+          "key": "MANUFACTURER",
+          "value": "Xiaomi",
+          "condition": "equal"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "23",
+          "condition": "equal"
+        },
+        {
+          "key": "ro.miui.ui.version.name",
+          "value": "V7",
+          "condition": "equal"
+        }
+      ]
+    },
+    {
+      "rom_id": 3,
+      "rom_name": "XiaomiV6",
+      "feature_items": [
+        {
+          "key": "MANUFACTURER",
+          "value": "Xiaomi",
+          "condition": "equal"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "18",
+          "condition": "greater"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "23",
+          "condition": "less"
+        },
+        {
+          "key": "ro.miui.ui.version.name",
+          "value": "V6",
+          "condition": "equal"
+        }
+      ]
+    },
+    {
+      "rom_id": 5,
+      "rom_name": "xiaomiV5",
+      "feature_items": [
+        {
+          "key": "MANUFACTURER",
+          "value": "Xiaomi",
+          "condition": "equal"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "21",
+          "condition": "less"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "16",
+          "condition": "ge"
+        },
+        {
+          "key": "ro.miui.ui.version.name",
+          "value": "V5",
+          "condition": "equal"
+        }
+      ]
+    },
+    {
+      "rom_id": 6,
+      "rom_name": "HUAWEI_EmotionUI_3.0_v4.4",
+      "feature_items": [
+        {
+          "key": "MANUFACTURER",
+          "value": "HUAWEI",
+          "condition": "equal"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "19",
+          "condition": "equal"
+        },
+        {
+          "key": "ro.build.version.emui",
+          "value": "EmotionUI_3.0",
+          "condition": "equal"
+        }
+      ]
+    },
+    {
+      "rom_id": 8,
+      "rom_name": "HUAWEI_EmotionUI_2.3_v4.4",
+      "feature_items": [
+        {
+          "key": "MANUFACTURER",
+          "value": "HUAWEI",
+          "condition": "equal"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "19",
+          "condition": "equal"
+        },
+        {
+          "key": "ro.build.version.emui",
+          "value": "EmotionUI_2.3",
+          "condition": "equal"
+        }
+      ]
+    },
+    {
+      "rom_id": 13,
+      "rom_name": "HTC",
+      "feature_items": [
+        {
+          "key": "MANUFACTURER",
+          "value": "htc",
+          "condition": "equal"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "20",
+          "condition": "greater"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "23",
+          "condition": "less"
+        },
+        {
+          "key": "ro.build.sense.version",
+          "value": "6.0",
+          "condition": "equal"
+        }
+      ]
+    },
+    {
+      "rom_id": 131,
+      "rom_name": "htc",
+      "feature_items": [
+        {
+          "key": "MANUFACTURER",
+          "value": "htc",
+          "condition": "equal"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "23",
+          "condition": "equal"
+        },
+        {
+          "key": "ro.build.sense.version",
+          "value": "6.0",
+          "condition": "equal"
+        }
+      ]
+    },
+    {
+      "rom_id": 141,
+      "rom_name": "lge",
+      "feature_items": [
+        {
+          "key": "BRAND",
+          "value": "LGE",
+          "condition": "equal"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "23",
+          "condition": "equal"
+        }
+      ]
+    },
+    {
+      "rom_id": 15,
+      "rom_name": "HUAWEI_EmotionUI_3.1",
+      "feature_items": [
+        {
+          "key": "MANUFACTURER",
+          "value": "HUAWEI",
+          "condition": "equal"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "19",
+          "condition": "greater"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "23",
+          "condition": "less"
+        },
+        {
+          "key": "ro.build.version.emui",
+          "value": "EmotionUI_3.1",
+          "condition": "equal"
+        }
+      ]
+    },
+    {
+      "rom_id": 17,
+      "rom_name": "HUAWEI_EmotionUI_4.0",
+      "feature_items": [
+        {
+          "key": "MANUFACTURER",
+          "value": "HUAWEI",
+          "condition": "equal"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "23",
+          "condition": "equal"
+        },
+        {
+          "key": "ro.build.version.emui",
+          "value": "EmotionUI_4.0",
+          "condition": "equal"
+        }
+      ]
+    },
+    {
+      "rom_id": 211,
+      "rom_name": "google",
+      "feature_items": [
+        {
+          "key": "BRAND",
+          "value": "google",
+          "condition": "equal"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "23",
+          "condition": "equal"
+        }
+      ]
+    },
+    {
+      "rom_id": 35,
+      "rom_name": "HTC",
+      "feature_items": [
+        {
+          "key": "MANUFACTURER",
+          "value": "htc",
+          "condition": "equal"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "19",
+          "condition": "greater"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "23",
+          "condition": "less"
+        },
+        {
+          "key": "ro.build.sense.version",
+          "value": "7.0",
+          "condition": "equal"
+        }
+      ]
+    },
+    {
+      "rom_id": 351,
+      "rom_name": "HTC",
+      "feature_items": [
+        {
+          "key": "MANUFACTURER",
+          "value": "htc",
+          "condition": "equal"
+        },
+        {
+          "key": "SDK_INT",
+          "value": "23",
+          "condition": "equal"
+        },
+        {
+          "key": "ro.build.sense.version",
+          "value": "7.0",
+          "condition": "equal"
+        }
+      ]
+    }
+  ]
+}

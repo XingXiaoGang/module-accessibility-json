@@ -1,0 +1,295 @@
+{
+  "version": 3,
+  "task_items": [
+    {
+      "rom": 1,
+      "title": "samsung-正在获取通知栏权限...",
+      "process_id": 2,
+      "type": 2,
+      "priority": 1
+    },
+    {
+      "rom": 1,
+      "title": "samsung-正在获取应用活动信息...",
+      "process_id": 4,
+      "type": 4,
+      "priority": 1
+    },
+    {
+      "rom": 101,
+      "title": "samsung-正在获取通知栏权限...6.0",
+      "process_id": 2,
+      "type": 2,
+      "priority": 1
+    },
+    {
+      "rom": 101,
+      "title": "samsung-正在获取应用活动信息...6.0",
+      "process_id": 401,
+      "type": 4,
+      "priority": 1
+    },
+    {
+      "rom": 102,
+      "title": "samsung-正在获取通知栏权限...",
+      "process_id": 2,
+      "type": 2,
+      "priority": 1
+    },
+    {
+      "rom": 2,
+      "title": "XiaomiV7-正在获取悬浮窗权限...",
+      "process_id": 1,
+      "type": 1,
+      "priority": 1
+    },
+    {
+      "rom": 2,
+      "title": "XiaomiV7-正在获取通知栏权限...",
+      "process_id": 2,
+      "type": 2,
+      "priority": 1
+    },
+    {
+      "rom": 2,
+      "title": "XiaomiV7-正在获取应用活动信息...",
+      "process_id": 4,
+      "type": 4,
+      "priority": 1
+    },
+    {
+      "rom": 2,
+      "title": "XiaomiV7-正在获取照相机权限...",
+      "process_id": 3,
+      "type": 5
+    },
+    {
+      "rom": 201,
+      "title": "XiaomiV7-正在获取悬浮窗权限...6.0",
+      "process_id": 1,
+      "type": 1,
+      "priority": 1
+    },
+    {
+      "rom": 201,
+      "title": "XiaomiV7-正在获取通知栏权限...6.0",
+      "process_id": 2,
+      "type": 2,
+      "priority": 1
+    },
+    {
+      "rom": 201,
+      "title": "XiaomiV7-正在获取应用活动信息...6.0",
+      "process_id": 401,
+      "type": 4,
+      "priority": 1
+    },
+    {
+      "rom": 201,
+      "title": "XiaomiV7-正在获取照相机权限...6.0",
+      "process_id": 3,
+      "type": 5
+    },
+    {
+      "rom": 3,
+      "title": "XiaomiV6-正在获取悬浮窗权限...",
+      "process_id": 1,
+      "type": 1,
+      "priority": 1
+    },
+    {
+      "rom": 3,
+      "title": "XiaomiV6-正在获取通知栏权限...",
+      "process_id": 2,
+      "type": 2,
+      "priority": 1
+    },
+    {
+      "rom": 3,
+      "title": "XiaomiV6-正在获取应用活动信息...",
+      "process_id": 4,
+      "type": 4,
+      "priority": 1
+    },
+    {
+      "rom": 3,
+      "title": "XiaomiV6-正在获取照相机权限...",
+      "process_id": 3,
+      "type": 5
+    },
+    {
+      "rom": 5,
+      "title": "XiaomiV5-正在获取悬浮窗权限...",
+      "process_id": 5,
+      "type": 1,
+      "priority": 1
+    },
+    {
+      "rom": 5,
+      "title": "XiaomiV5-正在获取通知栏权限...",
+      "process_id": 2,
+      "type": 2,
+      "priority": 1
+    },
+    {
+      "rom": 6,
+      "title": "HUAWEIemui3.0-正在获取悬浮窗权限...",
+      "process_id": 10,
+      "type": 1,
+      "priority": 1
+    },
+    {
+      "rom": 6,
+      "title": "HUAWEIemui3.0-正在获取通知栏权限...",
+      "process_id": 2,
+      "type": 2,
+      "priority": 1
+    },
+    {
+      "rom": 6,
+      "title": "HUAWEIemui3.0-正在获取照相机权限...",
+      "process_id": 6,
+      "type": 5
+    },
+    {
+      "rom": 8,
+      "title": "HUAWEIemui2.3-正在获取通知栏权限...",
+      "process_id": 2,
+      "type": 2,
+      "priority": 1
+    },
+    {
+      "rom": 13,
+      "title": "HTC-正在获取通知栏权限...",
+      "process_id": 201,
+      "type": 2,
+      "priority": 1
+    },
+    {
+      "rom": 13,
+      "title": "HTC-正在获取应用活动信息...",
+      "process_id": 402,
+      "type": 4,
+      "priority": 1
+    },
+    {
+      "rom": 131,
+      "title": "HTC-正在获取通知栏权限...6.0",
+      "process_id": 201,
+      "type": 2,
+      "priority": 1
+    },
+    {
+      "rom": 131,
+      "title": "HTC-正在获取应用活动信息...6.0",
+      "process_id": 401,
+      "type": 4,
+      "priority": 1
+    },
+    {
+      "rom": 15,
+      "title": "HUAWEIemui3.1-正在获取悬浮窗权限...",
+      "process_id": 102,
+      "type": 1,
+      "priority": 1
+    },
+    {
+      "rom": 15,
+      "title": "HUAWEIemui3.1-正在获取通知栏权限...",
+      "process_id": 2,
+      "type": 2,
+      "priority": 1
+    },
+    {
+      "rom": 15,
+      "title": "HUAWEIemui3.1-正在获取应用活动信息...",
+      "process_id": 4,
+      "type": 4,
+      "priority": 1
+    },
+    {
+      "rom": 15,
+      "title": "HUAWEIemui3.1-正在开机启动权限...",
+      "process_id": 103,
+      "type": 3,
+      "priority": 1
+    },
+    {
+      "rom": 17,
+      "title": "HUAWEIemui4.0-正在获取悬浮窗权限...6.0",
+      "process_id": 102,
+      "type": 1,
+      "priority": 1
+    },
+    {
+      "rom": 17,
+      "title": "HUAWEIemui4.0-正在获取应用信任权限...6.0",
+      "process_id": 104,
+      "type": 4,
+      "priority": 1
+    },
+    {
+      "rom": 17,
+      "title": "HUAWEIemui4.0-正在获取通知栏权限...6.0",
+      "process_id": 2,
+      "type": 2,
+      "priority": 1
+    },
+    {
+      "rom": 17,
+      "title": "HUAWEIemui4.0-正在获取应用活动信息...6.0",
+      "process_id": 401,
+      "type": 4,
+      "priority": 1
+    },
+    {
+      "rom": 17,
+      "title": "HUAWEIemui4.0-正在获取锁屏与密码权限...6.0",
+      "process_id": 105,
+      "type": 6,
+      "priority": 1
+    },
+    {
+      "rom": 141,
+      "title": "lge-正在获取通知栏权限...6.0",
+      "process_id": 2,
+      "type": 2,
+      "priority": 1
+    },
+    {
+      "rom": 141,
+      "title": "lge-正在获取应用活动信息...6.0",
+      "process_id": 404,
+      "type": 4,
+      "priority": 1
+    },
+    {
+      "rom": 35,
+      "title": "HTC-正在获取通知栏权限...",
+      "process_id": 202,
+      "type": 2,
+      "priority": 1
+    },
+    {
+      "rom": 35,
+      "title": "HTC-正在获取应用活动信息...",
+      "process_id": 403,
+      "type": 4,
+      "priority": 1
+    },
+    {
+      "rom": 351,
+      "title": "HTC-正在获取通知栏权限...6.0",
+      "process_id": 202,
+      "type": 2,
+      "priority": 1
+    },
+    {
+      "rom": 351,
+      "title": "HTC-正在获取应用活动信息...6.0",
+      "process_id": 401,
+      "type": 4,
+      "priority": 1
+    }
+  ]
+}

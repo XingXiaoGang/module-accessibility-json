@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Accessibility</string>
+    <string name="accessibility_service_description">辅助功能描述</string>
+    <string name="accessibility_service_label">Super Locker</string>
+</resources>

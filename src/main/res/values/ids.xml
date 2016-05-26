@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="return_download_accessibility_json" type="id" />
+    <item name="return_phone_match_result" type="id" />
+    <item name="retry_task" type="id" />
+    <item name="parse_json_return" type="id" />
+
+    <item name="action_start" type="id" />
+    <item name="action_stop" type="id" />
+    <item name="action_finish" type="id" />
+    <item name="action_error" type="id" />
+    <item name="action_progress_update" type="id" />
+</resources>
