@@ -32,7 +32,6 @@ import com.example.accessibility.rom.bean.RomInfo;
 import com.example.accessibility.utils.IntentUtils;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -98,13 +97,24 @@ public class JsonTaskHandlerImpl extends BaseTaskHandler {
             for (TaskInfo taskInfo : taskInfos) {
                 ProcessInfo processInfo = processInfosMap.get(taskInfo.processId);
                 if (processInfo != null) {
-                    final IntentInfo intentInfo = intentInfosMap.get(processInfo.intentId);
-                    if (intentInfo == null) {
+                    //检查intent
+                    if (processInfo.intentId == null || processInfo.intentId.length == 0) {
                         isOk = false;
                         if (BuildConfig.DEBUG) {
-                            throw new RuntimeException("accessibility json error :Id为 " + taskInfo.processId + " 的IntentInfo未配置");
+                            throw new RuntimeException("accessibility json error :ProcessInfo 里的Intent未配置");
+                        }
+                    } else {
+                        for (int i : processInfo.intentId) {
+                            final IntentInfo intentInfo = intentInfosMap.get(i);
+                            if (intentInfo == null) {
+                                isOk = false;
+                                if (BuildConfig.DEBUG) {
+                                    throw new RuntimeException("accessibility json error :Id为 " + taskInfo.processId + " 的IntentInfo未配置");
+                                }
+                            }
                         }
                     }
+                    //检查action
                     if (processInfo.actionId == null || processInfo.actionId.length == 0) {
                         isOk = false;
                         if (BuildConfig.DEBUG) {
@@ -141,6 +151,7 @@ public class JsonTaskHandlerImpl extends BaseTaskHandler {
     public void handleMessage(Message msg) {
         super.handleMessage(msg);
         if (msg.what == R.id.parse_json_return) {
+            Log.e(TAG, "验证json结果...");
             if (isPrepared()) {
                 //加载json成功 进入执行入口
                 Log.e(TAG, "开始执行辅助操作...");
@@ -187,7 +198,7 @@ public class JsonTaskHandlerImpl extends BaseTaskHandler {
         localBroadcastManager.sendBroadcast(intent);
     }
 
-    //根据romid执行后续的json解析
+    //根据romId执行后续的json解析
     private class ParseJsonTask extends Thread {
 
         private Context mContext;
@@ -203,7 +214,7 @@ public class JsonTaskHandlerImpl extends BaseTaskHandler {
             final RomInfo romInfo = AccessibilityClient.getInstance(getService().getApplication()).getRomInfo();
             if (romInfo != null) {
                 int romId = romInfo.romId;
-                //获得对应rom的辅助任务信息
+                //获得对应rom的辅助任务信息 TaskInfo
                 final TasksParser.TasksResult result = new TasksParser(mContext, romId).parse();
                 if (result != null) {
                     JsonTaskHandlerImpl.this.mTaskInfo = result.taskInfos;
@@ -211,27 +222,20 @@ public class JsonTaskHandlerImpl extends BaseTaskHandler {
                     for (int i = 0; i < mTaskInfo.size(); i++) {
                         taskIds[i] = mTaskInfo.get(i).processId;
                     }
-                    //获得对应辅助任务的具体执行信息
+                    //获得对应辅助任务的具体执行信息 ProcessInfo
                     final ProcessParser.ProcessInfoResult result1 = new ProcessParser(mContext, taskIds).parse();
                     if (result1 != null) {
                         JsonTaskHandlerImpl.this.mProcessInfoMap = result1.processInfos;
 
-                        //待解析的id集合
-                        int[] intentIds = new int[mProcessInfoMap.size()];
+                        //待解析的Intent,Action id集合
+                        List<int[]> intentIds = new ArrayList<>();
                         List<int[]> actionIds = new ArrayList<>();
 
                         Set<Map.Entry<Integer, ProcessInfo>> set = mProcessInfoMap.entrySet();
-                        Iterator<Map.Entry<Integer, ProcessInfo>> iterator = set.iterator();
-                        int index = 0;
-                        while (iterator.hasNext()) {
-                            Map.Entry<Integer, ProcessInfo> entry = iterator.next();
+                        for (Map.Entry<Integer, ProcessInfo> entry : set) {
                             final ProcessInfo info = entry.getValue();
-                            intentIds[index] = info.intentId;
+                            intentIds.add(info.intentId);
                             actionIds.add(info.actionId);
-                            index++;
-                        }
-                        for (int i = 0; i < mTaskInfo.size(); i++) {
-                            taskIds[i] = mTaskInfo.get(i).processId;
                         }
                         //获得具体执行的具体intent 和 关键字等信息
                         final IntentParser.IntentResult result2 = new IntentParser(mContext, intentIds).parse();
@@ -271,7 +275,6 @@ public class JsonTaskHandlerImpl extends BaseTaskHandler {
             final Map<Integer, ActionInfo> actionInfosMap = mActionInfoMap;
 
             boolean hasErro = false;
-            int erroCode = -1;
             for (int i = 0; i < taskInfos.size(); i++) {
                 final TaskInfo taskInfo = taskInfos.get(i);
                 //通知进度
@@ -282,18 +285,19 @@ public class JsonTaskHandlerImpl extends BaseTaskHandler {
                 final ProcessInfo processInfo = processInfosMap.get(taskInfo.processId);
                 Log.w(TAG, "开始辅助项目:" + processInfo.describe);
                 //最终执行要用到的信息
-                final IntentInfo intentInfo = intentInfosMap.get(processInfo.intentId);
+                final List<IntentInfo> intentInfos = new ArrayList<>();
+                for (int in : processInfo.intentId) {
+                    intentInfos.add(intentInfosMap.get(in));
+                }
                 final List<ActionInfo> actions = new ArrayList<>();
                 for (int ac : processInfo.actionId) {
                     actions.add(actionInfosMap.get(ac));
                 }
 
-                if (!startAction(intentInfo, actions)) {
+                if (!startAction(intentInfos, actions)) {
                     hasErro = true;
-                    erroCode = intentInfo.id;
-
                     //通知错误
-                    sendErrorMsg(Statics.Code.ERROR_CODE_INTENT_ACTION_FAILED, "task exec failed:intentId:" + erroCode + ",action:" + actions);
+                    sendErrorMsg(Statics.Code.ERROR_CODE_INTENT_ACTION_FAILED, "task exec failed,current:" + current + ",action:" + actions);
                     Log.w(TAG, "辅助项目执行失败：" + actions);
                 }
 
@@ -305,7 +309,7 @@ public class JsonTaskHandlerImpl extends BaseTaskHandler {
                 }
             }
             //通知完成
-            Message message = obtainMessage(R.id.action_finish, hasErro ? 1 : 0, erroCode);
+            Message message = obtainMessage(R.id.action_finish, hasErro ? 1 : 0, current);
             mHandler.sendMessage(message);
             isRunning = false;
             Log.e(TAG, "辅助操作执行完毕.... has error:" + hasErro);
@@ -314,28 +318,28 @@ public class JsonTaskHandlerImpl extends BaseTaskHandler {
         /**
          * todo 有待改善一下json结构 以更好的适匹一个操作涉及多个包名的情况，即 ProcessInfo里面的 intent_id也改为数组
          **/
-        private boolean startAction(final IntentInfo intentInfo, final List<ActionInfo> actionInfo) {
+        private boolean startAction(final List<IntentInfo> intentInfo, final List<ActionInfo> actionInfo) {
             Log.d(TAG, "====startAction====" + intentInfo);
-            final List<Intent> intentList = createIntent(intentInfo);
-            if (intentList.size() == 1) {
-                final Intent intent = intentList.get(0);
-                if (runAction(intent, actionInfo)) {
+            //todo ActionInfo里面应该配置是否中断信息，来判断是否在执行不成功的时候执行整个任务的中断
+            if (intentInfo.size() == 1) {
+                final Intent intent = createIntent(intentInfo.get(0));
+                if (!runAction(intent, actionInfo)) {
                     Log.e(TAG, "runAction 失败1：" + actionInfo);
                 }
                 if (interrupt) {
                     return false;
                 }
-            } else if (intentList.size() == actionInfo.size()) {
-                for (int i = 0; i < intentList.size(); i++) {
-                    final Intent intent = intentList.get(i);
-                    if (runAction(intent, actionInfo)) {
+            } else if (intentInfo.size() == actionInfo.size()) {
+                for (int i = 0; i < intentInfo.size(); i++) {
+                    final Intent intent = createIntent(intentInfo.get(i));
+                    if (!runAction(intent, actionInfo)) {
                         Log.e(TAG, "runAction 失败2：" + actionInfo);
                     }
                 }
             } else {
-                throw new RuntimeException("不支持的对应关系：intent数量和action数量不一一致!");
+                throw new RuntimeException("不支持的对应关系：intent数量和action数量要满足1对n 或 n对n关系!");
             }
-            Log.w(TAG, "辅助项目完成:" + intentInfo.id);
+            Log.w(TAG, "辅助项目完成:");
             return true;
         }
 
@@ -469,12 +473,11 @@ public class JsonTaskHandlerImpl extends BaseTaskHandler {
             return nodeInfo;
         }
 
-        private List<Intent> createIntent(IntentInfo intentInfo) {
-            List<Intent> intents = new ArrayList<>();
-
+        private Intent createIntent(IntentInfo intentInfo) {
+            Intent intent = null;
             //有可能涉及多个包名
             if (intentInfo.packageName != null) {
-                Intent intent = new Intent();
+                intent = new Intent();
                 if (intentInfo.activityName != null) {
                     intent.setComponent(new ComponentName(intentInfo.packageName, intentInfo.activityName));
                 } else {
@@ -490,26 +493,8 @@ public class JsonTaskHandlerImpl extends BaseTaskHandler {
                     String[] extr = intentInfo.extra.split("=");
                     intent.putExtra(extr[0], extr[1]);
                 }
-                intents.add(intent);
             }
-
-            if (intentInfo.packageName1 != null) {
-                Intent intent = IntentUtils.qureyLaunchIntent(getService(), intentInfo.packageName1);
-                if (intent != null) {
-                    intents.add(intent);
-                } else {
-                    sendErrorMsg(Statics.Code.ERROR_CODE_INTENT_OPEN_FAILED, "包名不存在：" + intentInfo.packageName1 + ",intentInfoId:" + intentInfo.id);
-                }
-            }
-            if (intentInfo.packageName2 != null) {
-                Intent intent = IntentUtils.qureyLaunchIntent(getService(), intentInfo.packageName2);
-                if (intent != null) {
-                    intents.add(intent);
-                } else {
-                    sendErrorMsg(Statics.Code.ERROR_CODE_INTENT_OPEN_FAILED, "包名不存在：" + intentInfo.packageName2 + ",intentInfoId:" + intentInfo.id);
-                }
-            }
-            return intents;
+            return intent;
         }
     }
 }

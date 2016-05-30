@@ -3,6 +3,7 @@ package com.example.accessibility.parser;
 import android.content.Context;
 import android.util.Log;
 
+import com.example.accessibility.Statics;
 import com.example.accessibility.bean.TaskInfo;
 import com.google.gson.stream.JsonReader;
 
@@ -18,7 +19,6 @@ import java.util.List;
  */
 public class TasksParser extends JsonParser<TasksParser.TasksResult> {
 
-    private static final String TASK_INFO_JSON_PATH = "permission/tasks_config.json";
     private int mRomIdToFind;
 
     public TasksParser(Context context, int romId) {
@@ -29,7 +29,7 @@ public class TasksParser extends JsonParser<TasksParser.TasksResult> {
     @Override
     protected InputStream decodeJsonStream() {
         try {
-            return mContext.getAssets().open(TASK_INFO_JSON_PATH);
+            return mContext.getAssets().open(Statics.TASK_INFO_JSON_PATH);
         } catch (IOException e) {
             e.printStackTrace();
         }

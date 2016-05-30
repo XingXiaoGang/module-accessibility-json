@@ -3,6 +3,7 @@ package com.example.accessibility.parser;
 import android.content.Context;
 import android.util.Log;
 
+import com.example.accessibility.Statics;
 import com.example.accessibility.bean.ProcessInfo;
 import com.google.gson.stream.JsonReader;
 
@@ -18,7 +19,6 @@ import java.util.Map;
  */
 public class ProcessParser extends JsonParser<ProcessParser.ProcessInfoResult> {
 
-    private static final String PROCESS_INFO_JSON_PATH = "permission/process_info_data.json";
 
     private int[] mProcessIds;
 
@@ -33,7 +33,7 @@ public class ProcessParser extends JsonParser<ProcessParser.ProcessInfoResult> {
     @Override
     protected InputStream decodeJsonStream() {
         try {
-            return mContext.getAssets().open(PROCESS_INFO_JSON_PATH);
+            return mContext.getAssets().open(Statics.PROCESS_INFO_JSON_PATH);
         } catch (IOException e) {
             e.printStackTrace();
         }

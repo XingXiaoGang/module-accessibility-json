@@ -19,7 +19,7 @@ public class ProcessInfo extends Base {
 
     @Expose
     @SerializedName("intent_id")
-    public int intentId;
+    public int[] intentId;
 
     @Expose
     @SerializedName("action_id")

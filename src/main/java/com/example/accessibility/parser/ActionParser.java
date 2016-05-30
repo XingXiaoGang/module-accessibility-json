@@ -2,6 +2,7 @@ package com.example.accessibility.parser;
 
 import android.content.Context;
 
+import com.example.accessibility.Statics;
 import com.example.accessibility.bean.ActionInfo;
 import com.google.gson.stream.JsonReader;
 
@@ -18,15 +19,14 @@ import java.util.Map;
  */
 public class ActionParser extends JsonParser<ActionParser.ActionResult> {
 
-    private static final String INTENT_INFO_JSON_PATH = "permission/action_info_data.json";
-    private List<Integer> mIntentIds = new ArrayList<>();
+    private List<Integer> mActionIds = new ArrayList<>();
 
     public ActionParser(Context context, List<int[]> intentIds) {
         super(context);
         if (intentIds != null) {
             for (int[] ids : intentIds) {
                 for (int i : ids) {
-                    mIntentIds.add(i);
+                    mActionIds.add(i);
                 }
             }
         }
@@ -35,7 +35,7 @@ public class ActionParser extends JsonParser<ActionParser.ActionResult> {
     @Override
     protected InputStream decodeJsonStream() {
         try {
-            return mContext.getAssets().open(INTENT_INFO_JSON_PATH);
+            return mContext.getAssets().open(Statics.ACTION_INFO_JSON_PATH);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -92,7 +92,7 @@ public class ActionParser extends JsonParser<ActionParser.ActionResult> {
     }
 
     private boolean contains(int id) {
-        for (int i : mIntentIds) {
+        for (int i : mActionIds) {
             if (i == id) {
                 return true;
             }

@@ -4,110 +4,110 @@
     {
       "id":1,
       "describe":"miui 打开悬浮窗",
-      "intent_id":1,
+      "intent_id":[1],
       "action_id":[1002, 9002]
     },
     {
       "id":2,
       "describe":"打开通知栏权限(nexus,sony,motorola, miv7)",
-      "intent_id":2,
+      "intent_id":[2],
       "action_id":[1001, 9001]
     },
     {
       "id":201,
       "describe":"打开通知栏权限(HTCsense6.0)",
-      "intent_id":2,
+      "intent_id":[2],
       "action_id":[1001, 9003]
     },
     {
       "id":202,
       "describe":"打开通知栏权限(HTCsense7.0)",
-      "intent_id":2,
+      "intent_id":[2],
       "action_id":[1001, 9004]
     },
     {
       "id":3,
       "describe":"打开照相机权限",
-      "intent_id":3,
+      "intent_id":[3],
       "action_id":[1003, 9002]
     },
     {
       "id":4,
       "describe":"打开获取应用活动信息权限",
-      "intent_id":4,
+      "intent_id":[4],
       "action_id":[1004,9001]
     },
 
     {
       "id":401,
       "describe":"打开获取应用活动信息权限(6.0)",
-      "intent_id":4,
+      "intent_id":[4],
       "action_id":[1014,1015]
     },
     {
       "id":402,
       "describe":"打开获取HTC应用活动信息权限(sense6.0)",
-      "intent_id":4,
+      "intent_id":[4],
       "action_id":[1004,9003]
     },
     {
       "id":403,
       "describe":"打开获取HTC应用活动信息权限(sense7.0)",
-      "intent_id":4,
+      "intent_id":[4],
       "action_id":[1004,9004]
     },
     {
       "id":404,
       "describe":"打开获取LGE应用活动信息权限(6.0)",
-      "intent_id":4,
+      "intent_id":[4],
       "action_id":[1014,1015,9001]
     },
     {
       "id":5,
       "describe":"打开悬浮窗权限(miui v5)",
-      "intent_id":5,
+      "intent_id":[5],
       "action_id":[1005, 9001]
     },
     {
       "id":6,
       "describe":"打开照相机权限",
-      "intent_id":7,
+      "intent_id":[7],
       "action_id":[1006, 6001,6002,6003]
     },
     {
       "id":10,
       "describe":"EMUI3.0打开悬浮窗权限",
-      "intent_id":6,
+      "intent_id":[6],
       "action_id":[1007, 7001]
     },
     {
       "id":102,
       "describe":"EMUI3.1-4.0打开悬浮窗权限",
-      "intent_id":102,
+      "intent_id":[102],
       "action_id":[7001]
     },
     {
       "id":103,
       "describe":"EMUI3.1打开自启动权限",
-      "intent_id":103,
+      "intent_id":[103],
       "action_id":[7001]
     },
     {
       "id":104,
       "describe":"emui4.0打开信任权限",
-      "intent_id":104,
+      "intent_id":[104,107,108],
       "action_id":[7003,7004,7005]
     },
     {
       "id":105,
       "describe":"emui4.0打开锁屏与密码",
-      "intent_id":105,
+      "intent_id":[105],
       "action_id":[7006,7007]
     },
     {
       "id":106,
       "describe":"激活设备管理器",
-      "intent_id":106,
+      "intent_id":[106],
       "action_id":[1016]
     }
   ]

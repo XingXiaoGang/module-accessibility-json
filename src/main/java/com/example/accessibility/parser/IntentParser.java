@@ -3,13 +3,16 @@ package com.example.accessibility.parser;
 import android.content.Context;
 import android.util.Log;
 
+import com.example.accessibility.Statics;
 import com.example.accessibility.bean.IntentInfo;
 import com.google.gson.stream.JsonReader;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -17,18 +20,24 @@ import java.util.Map;
  */
 public class IntentParser extends JsonParser<IntentParser.IntentResult> {
 
-    private static final String INTENT_INFO_JSON_PATH = "permission/intent_info_data.json";
-    private int[] mIntentIds;
+    private List<Integer> mIntentIds;
 
-    public IntentParser(Context context, int[] intentIds) {
+    public IntentParser(Context context, List<int[]> intentIds) {
         super(context);
-        this.mIntentIds = intentIds;
+        this.mIntentIds = new ArrayList<>();
+        if (intentIds != null) {
+            for (int[] ids : intentIds) {
+                for (int i : ids) {
+                    mIntentIds.add(i);
+                }
+            }
+        }
     }
 
     @Override
     protected InputStream decodeJsonStream() {
         try {
-            return mContext.getAssets().open(INTENT_INFO_JSON_PATH);
+            return mContext.getAssets().open(Statics.INTENT_INFO_JSON_PATH);
         } catch (IOException e) {
             e.printStackTrace();
         }

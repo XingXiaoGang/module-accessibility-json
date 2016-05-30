@@ -21,17 +21,6 @@ public class IntentInfo extends Base {
     @SerializedName("package")
     public String packageName;
 
-    /**
-     * 有的过程是在多个apk中完成的，涉及到多个包名
-     **/
-    @Expose
-    @SerializedName("package1")
-    public String packageName1;
-
-    @Expose
-    @SerializedName("package2")
-    public String packageName2;
-
     @Expose
     @SerializedName("activity")
     public String activityName;

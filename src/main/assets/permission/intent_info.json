@@ -83,10 +83,8 @@
     },
     {
       "id": 104,
-      "describe": "emui4.0打开信任权限",
+      "describe": "emui4.0打开信任权限step1",
       "package": "com.android.settings",
-      "package1": "com.huawei.systemmanager",
-      "package2": "com.android.packageinstaller",
       "data": "package:com.example.xingxiaogang.testfingerprint",
       "action": "android.settings.APPLICATION_DETAILS_SETTINGS"
     },
@@ -101,6 +99,18 @@
       "describe": "打开设备管理器",
       "package": "com.android.settings",
       "action": "android.app.action.ADD_DEVICE_ADMIN"
+    },
+    {
+      "id": 107,
+      "describe": "emui4.0打开信任权限step2",
+      "package": "com.huawei.systemmanager",
+      "data": "package:com.example.xingxiaogang.testfingerprint"
+    },
+    {
+      "id": 108,
+      "describe": "emui4.0打开信任权限step3",
+      "package": "com.android.packageinstaller",
+      "data": "package:com.example.xingxiaogang.testfingerprint"
     }
   ]
 }

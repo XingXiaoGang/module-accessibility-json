@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class RomInfoParser extends JsonParser<RomInfoParser.RomInfoResult> {
 
-    private static final String PHONE_INFO_JSON_URL = "permission/rom_info_data.json";
+    private static final String PHONE_INFO_JSON_URL = "permission/rom_info.json";
 
     public RomInfoParser(Context context) {
         super(context);

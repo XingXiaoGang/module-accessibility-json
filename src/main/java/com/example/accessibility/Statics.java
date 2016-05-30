@@ -7,6 +7,12 @@ public class Statics {
     public static final String ACCESSIBILITY_SERVER_ACTION = "com.gang.accessibility.server.AccessibilityService";
     public static final String ACCESSIBILITY_CLIENT_ACTION = "com.gang.accessibility.client.AccessibilityService";
 
+    public static final String ACTION_INFO_JSON_PATH = "permission/action_info.json";
+    public static final String INTENT_INFO_JSON_PATH = "permission/intent_info.json";
+    public static final String PROCESS_INFO_JSON_PATH = "permission/process_info.json";
+    public static final String TASK_INFO_JSON_PATH = "permission/tasks_info.json";
+
+
     public static class Key {
         public static final String ACTION = "command";
         public static final String CODE = "code";
