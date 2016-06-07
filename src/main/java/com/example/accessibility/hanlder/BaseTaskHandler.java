@@ -47,8 +47,8 @@ public abstract class BaseTaskHandler extends Handler implements ITaskHandler {
         return findNode(id, 1, index, parents);
     }
 
-    protected final AccessibilityNodeInfo findNodeByText(String id, int index) {
-        return findNodeById(id, index, 0);
+    protected final AccessibilityNodeInfo findNodeByText(String text, int index) {
+        return findNodeByText(text, index, 0);
     }
 
     protected final AccessibilityNodeInfo findNodeByText(String id, int index, int parents) {
