@@ -8,6 +8,12 @@
       "action_id":[1002, 9002]
     },
     {
+      "id":501,
+      "describe":"miui v8 打开悬浮窗",
+      "intent_id":[107],
+      "action_id":[1002, 9002]
+    },
+    {
       "id":2,
       "describe":"打开通知栏权限(nexus,sony,motorola, miv7)",
       "intent_id":[2],
@@ -52,7 +58,7 @@
     },
     {
       "id":403,
-      "describe":"打开获取HTC应用活动信息权限(sense7.0)",
+      "describe":"打开获取HTC应用活动信息权限(api2122sense7.0)",
       "intent_id":[4],
       "action_id":[1004,9004]
     },
@@ -61,6 +67,18 @@
       "describe":"打开获取LGE应用活动信息权限(6.0)",
       "intent_id":[4],
       "action_id":[1014,1015,9001]
+    },
+    {
+      "id":405,
+      "describe":"打开获取HTC应用活动信息权限(api23sense7.0)",
+      "intent_id":[4],
+      "action_id":[1014,1017]
+    },
+    {
+      "id":406,
+      "describe":"打开获取应用活动信息权限(7.0)",
+      "intent_id":[4],
+      "action_id":[1014,1019]
     },
     {
       "id":5,
@@ -95,7 +113,7 @@
     {
       "id":104,
       "describe":"emui4.0打开信任权限",
-      "intent_id":[104,107,108],
+      "intent_id":[104],
       "action_id":[7003,7004,7005]
     },
     {
@@ -109,6 +127,12 @@
       "describe":"激活设备管理器",
       "intent_id":[106],
       "action_id":[1016]
+    },
+    {
+      "id":107,
+      "describe":"打开获取应用活动信息权限(xiaomi v8)",
+      "intent_id":[4],
+      "action_id":[1014,1018]
     }
   ]
 }

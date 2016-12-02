@@ -1,145 +1,123 @@
 {
-  "version": 3,
-  "action_items": [
+  "version":3,
+  "action_items":[
+
     {
-      "id": 1001,
-      "describe": "打开通知栏权限",
-      "need_wait_window": true,
-      "need_wait_time": 800,
-      "locate_node": {
-        "find_texts": [
-          "Super Locker"
-        ]
+      "id":1001,
+      "describe":"打开通知栏权限",
+      "need_wait_window":true,
+      "locate_node":{
+        "find_texts":["Super Locker"]
       },
-      "scroll_node": {
-        "class_name": "android.widget.ListView"
+      "scroll_node":{
+        "class_name":"android.widget.ListView"
       },
-      "check_node": {
-        "class_name": "android.widget.CheckBox",
-        "correct_status": true
+      "check_node":{
+        "class_name":"android.widget.CheckBox",
+        "correct_status":true
       },
-      "operation_node": {
-        "behavior": "click"
+      "operation_node":{
+        "behavior":"click"
+      }
+    },
+
+    {
+      "id":1002,
+      "describe":"打开悬浮窗权限",
+      "need_wait_window":true,
+      "locate_node":{
+        "find_texts":["显示悬浮窗","Display pop-up window","顯示浮動資訊框"]
+      },
+      "scroll_node":{
+        "class_name":"android.widget.ListView"
+      },
+      "click_node":{
+        "class_name":"android.widget.TextView"
+      },
+      "operation_node":{
+        "behavior":"click"
+      }
+    },
+
+    {
+      "id":1003,
+      "describe":"打开照相机权限",
+      "need_wait_window":true,
+      "identify_node":{
+        "find_texts":["资费相关", "隐私相关"],
+        "allow_skip":true
+      },
+      "locate_node":{
+        "find_texts":["相机"]
+      },
+      "scroll_node":{
+        "class_name":"android.widget.ListView"
+      },
+      "click_node":{
+        "class_name":"android.widget.TextView"
+      },
+      "operation_node":{
+        "behavior":"click"
       }
     },
     {
-      "id": 1002,
-      "describe": "打开悬浮窗权限",
-      "need_wait_window": true,
-      "need_wait_time": 500,
-      "locate_node": {
-        "find_texts": [
-          "显示悬浮窗",
-          "Display pop-up window",
-          "顯示浮動資訊框"
-        ]
+      "id":1004,
+      "describe":"打开获取应用活动信息权限",
+      "need_wait_window":true,
+      "locate_node":{
+        "find_texts":["Super Locker"]
       },
-      "scroll_node": {
-        "class_name": "android.widget.ListView"
+      "scroll_node":{
+        "class_name":"android.widget.ListView"
       },
-      "click_node": {
-        "class_name": "android.widget.TextView"
+      "check_node":{
+        "class_name":"android.widget.CheckBox",
+        "correct_status":true
       },
-      "operation_node": {
-        "behavior": "click"
+      "operation_node":{
+        "behavior":"click"
       }
     },
     {
-      "id": 1003,
-      "describe": "打开照相机权限",
-      "need_wait_window": true,
-      "need_wait_time": 500,
-      "identify_node": {
-        "find_texts": [
-          "资费相关",
-          "隐私相关"
-        ],
-        "allow_skip": true
+      "id":1005,
+      "describe":"打开悬浮窗权限",
+      "need_wait_window":true,
+      "locate_node":{
+        "find_texts":["显示悬浮窗","Display pop-up window"]
       },
-      "locate_node": {
-        "find_texts": [
-          "相机"
-        ]
+      "click_node":{
+        "class_name":"android.widget.TextView"
       },
-      "scroll_node": {
-        "class_name": "android.widget.ListView"
-      },
-      "click_node": {
-        "class_name": "android.widget.TextView"
-      },
-      "operation_node": {
-        "behavior": "click"
+      "operation_node":{
+        "behavior":"click"
       }
     },
-    {
-      "id": 1004,
-      "describe": "打开获取应用活动信息权限",
-      "need_wait_window": true,
-      "need_wait_time": 500,
-      "locate_node": {
-        "find_texts": [
-          "testFingerPrint"
-        ]
-      },
-      "scroll_node": {
-        "class_name": "android.widget.ListView"
-      },
-      "check_node": {
-        "class_name": "android.widget.CheckBox",
-        "correct_status": true
-      },
-      "operation_node": {
-        "behavior": "click"
-      }
-    },
-    {
-      "id": 1005,
-      "describe": "打开悬浮窗权限",
-      "need_wait_window": true,
-      "need_wait_time": 500,
-      "locate_node": {
-        "find_texts": [
-          "显示悬浮窗",
-          "Display pop-up window"
-        ]
-      },
-      "click_node": {
-        "class_name": "android.widget.TextView"
-      },
-      "operation_node": {
-        "behavior": "click"
-      }
-    },
+
     {
       "id": 9001,
       "describe": "用于点击确定按钮",
       "need_wait_window": true,
-      "need_wait_time": 500,
+      "need_wait_time": 1000,
       "locate_node": {
         "id_name": "android:id/button1",
-        "class_name": "android.widget.Button"
+        "class_name":"android.widget.Button"
       },
       "operation_node": {
         "behavior": "click"
       }
     },
     {
-      "id": 9002,
-      "describe": "用于点击确定按钮(MIUi)",
-      "need_wait_window": true,
-      "need_wait_time": 500,
-      "locate_node": {
-        "find_texts": [
-          "允许",
-          "Accept",
-          "允許"
-        ]
+      "id":9002,
+      "describe":"用于点击确定按钮(MIUi)",
+      "need_wait_window":true,
+      "locate_node":{
+        "find_texts":["允许","Accept","允許"]
       },
-      "click_node": {
-        "class_name": "android.widget.CheckedTextView"
+      "click_node":{
+        "class_name":"android.widget.CheckedTextView"
       },
-      "operation_node": {
-        "behavior": "click"
+      "operation_node":{
+        "behavior":"click"
       }
     },
     {
@@ -149,7 +127,12 @@
       "need_wait_time": 1000,
       "locate_node": {
         "id_name": "com.htc:id/button1",
-        "class_name": "android.widget.Button"
+        "class_name":"android.widget.Button"
+      },
+
+      "locate_node": {
+        "id_name": "com.htc:id/button1",
+        "class_name":"android.widget.Button"
       },
       "operation_node": {
         "behavior": "click"
@@ -162,229 +145,241 @@
       "need_wait_time": 1000,
       "locate_node": {
         "id_name": "com.android.settings:id/button1",
-        "class_name": "android.widget.Button"
+        "class_name":"android.widget.Button"
       },
       "operation_node": {
         "behavior": "click"
       }
     },
     {
-      "id": 1006,
-      "describe": "打开照相机权限",
-      "need_wait_window": true,
-      "need_wait_time": 500,
-      "locate_node": {
-        "find_texts": [
-          "权限"
-        ]
+      "id":1006,
+      "describe":"打开照相机权限",
+      "need_wait_window":true,
+      "locate_node":{
+        "find_texts":["权限"]
       },
-      "operation_node": {
-        "behavior": "click"
+      "operation_node":{
+        "behavior":"click"
       }
     },
     {
-      "id": 6001,
-      "describe": "打开照相机权限",
-      "need_wait_window": false,
-      "locate_node": {
-        "find_texts": [
-          "调用摄像头"
-        ]
+      "id":6001,
+      "describe":"打开照相机权限",
+      "need_wait_window":false,
+      "locate_node":{
+        "find_texts":["调用摄像头"]
       },
-      "scroll_node": {
-        "class_name": "android.widget.ListView"
+      "scroll_node":{
+        "class_name":"android.widget.ListView"
       },
-      "operation_node": {
-        "behavior": "click"
+      "operation_node":{
+        "behavior":"click"
       }
     },
     {
-      "id": 6002,
-      "describe": "打开照相机权限",
-      "need_wait_window": true,
-      "need_wait_time": 500,
-      "locate_node": {
-        "find_texts": [
-          "Super Locker"
-        ]
+      "id":6002,
+      "describe":"打开照相机权限",
+      "need_wait_window":true,
+      "locate_node":{
+        "find_texts":["Super Locker"]
       },
-      "scroll_node": {
-        "class_name": "android.widget.ListView"
+      "scroll_node":{
+        "class_name":"android.widget.ListView"
       },
-      "operation_node": {
-        "behavior": "click"
+      "operation_node":{
+        "behavior":"click"
       }
     },
     {
-      "id": 6003,
-      "describe": "打开照相机权限",
-      "need_wait_window": true,
-      "need_wait_time": 500,
-      "locate_node": {
-        "find_texts": [
-          "允许"
-        ]
+      "id":6003,
+      "describe":"打开照相机权限",
+      "need_wait_window":true,
+      "locate_node":{
+        "find_texts":["允许"]
       },
-      "operation_node": {
-        "behavior": "click"
+      "operation_node":{
+        "behavior":"click"
       }
     },
     {
-      "id": 1007,
-      "describe": "打开悬浮窗权限",
-      "need_wait_window": true,
-      "need_wait_time": 500,
-      "locate_node": {
-        "find_texts": [
-          "悬浮窗管理",
-          "管理拖放區",
-          "置放區管理",
-          "Bırakma bölgesi yönetimi",
-          "Gestion de la zone de saut",
-          "Dropzones",
-          "Dropzone management",
-          "Área de colocación",
-          "Verwaltung der Dropzone",
-          "Arrastar-soltar",
-          "Zona de descargas",
-          "Gestione dropzone"
-        ]
+      "id":1007,
+      "describe":"打开悬浮窗权限",
+      "need_wait_window":true,
+      "locate_node":{
+        "find_texts":["悬浮窗管理","管理拖放區","置放區管理","Bırakma bölgesi yönetimi","Gestion de la zone de saut","Dropzones","Dropzone management","Área de colocación","Verwaltung der Dropzone","Arrastar-soltar","Zona de descargas","Gestione dropzone"]
       },
-      "operation_node": {
-        "behavior": "click"
+      "operation_node":{
+        "behavior":"click"
       }
     },
     {
-      "id": 7001,
-      "describe": "打开悬浮窗权限",
-      "need_wait_window": false,
-      "need_wait_time": 3000,
-      "locate_node": {
-        "item_index": "1",
-        "find_texts": [
-          "testFingerPrint"
-        ]
+      "id":7001,
+      "describe":"打开悬浮窗权限",
+      "need_wait_window":false,
+      "need_wait_time":3000,
+      "locate_node":{
+        "item_index":"1",
+        "find_texts":["Super Locker"]
       },
-      "scroll_node": {
-        "class_name": "android.widget.ListView"
+      "scroll_node":{
+        "class_name":"android.widget.ListView"
       },
-      "operation_node": {
-        "behavior": "click"
+      "operation_node":{
+        "behavior":"click"
+      }
+    },
+
+    {
+      "id":7003,
+      "describe":"找信任权限1",
+      "need_wait_window":true,
+      "need_wait_time":1000,
+      "locate_node":{
+        "find_texts":["应用"]
+      },
+
+      "operation_node":{
+        "behavior":"click"
+      }
+    },
+
+    {
+      "id":7004,
+      "describe":"找信任权限2",
+      "need_wait_window":false,
+      "need_wait_time":1000,
+      "locate_node":{
+        "id_name":"com.android.packageinstaller:id/arrow",
+        "class_name":"android.widget.ImageView"
+      },
+
+      "operation_node":{
+        "behavior":"click"
+      }
+    },
+
+    {
+      "id":7005,
+      "describe":"找信任权限3",
+      "need_wait_window":false,
+      "need_wait_time":1000,
+      "locate_node":{
+        "id_name":"com.huawei.systemmanager:id/trust_single_app",
+        "class_name":"android.widget.Switch"
+      },
+
+      "operation_node":{
+        "behavior":"click"
       }
     },
     {
-      "id": 7003,
-      "describe": "找信任权限1",
-      "need_wait_window": false,
-      "need_wait_time": 1000,
-      "locate_node": {
-        "item_index": "2",
-        "id_name": "androidhwext:id/preference_emui_root",
-        "class_name": "android.widget.FrameLayout"
+      "id":7006,
+      "describe":"打开锁屏与密码1",
+      "need_wait_window":false,
+      "need_wait_time":1000,
+      "locate_node":{
+        "find_texts":["锁屏和密码","Screen lock & passwords"]
       },
-      "operation_node": {
-        "behavior": "click"
+      "scroll_node":{
+        "class_name":"android.widget.ScrollView"
+      },
+      "operation_node":{
+        "behavior":"click"
       }
     },
     {
-      "id": 7004,
-      "describe": "找信任权限2",
-      "need_wait_window": false,
-      "need_wait_time": 1000,
-      "locate_node": {
-        "id_name": "com.android.packageinstaller:id/arrow",
-        "class_name": "android.widget.ImageView"
+      "id":7007,
+      "describe":"打开锁屏与密码2",
+      "need_wait_window":false,
+      "need_wait_time":1000,
+      "locate_node":{
+        "item_index":"0",
+        "id_name":"androidhwext:id/preference_emui_root",
+        "class_name":"android.widget.FrameLayout"
       },
-      "operation_node": {
-        "behavior": "click"
+      "operation_node":{
+        "behavior":"click"
+      }
+    },
+
+    {
+      "id":1014,
+      "describe":"打开获取应用活动信息权限(6.0系统)",
+      "need_wait_window":true,
+      "need_wait_time":3000,
+      "locate_node":{
+        "find_texts":["Super Locker"]
+      },
+      "scroll_node":{
+        "class_name":"android.widget.ListView"
+      },
+      "operation_node":{
+        "behavior":"click"
       }
     },
     {
-      "id": 7005,
-      "describe": "找信任权限3",
-      "need_wait_window": false,
-      "need_wait_time": 1000,
-      "locate_node": {
-        "id_name": "com.huawei.systemmanager:id/trust_single_app",
-        "class_name": "android.widget.Switch"
+      "id":1015,
+      "describe":"打开获取应用活动信息权限(6.0系统)",
+      "need_wait_window":true,
+      "need_wait_time":1000,
+      "locate_node":{
+        "id_name":"android:id/switchWidget",
+        "class_name":"android.widget.Switch"
       },
-      "operation_node": {
-        "behavior": "click"
+      "operation_node":{
+        "behavior":"click"
       }
     },
     {
-      "id": 7006,
-      "describe": "打开锁屏与密码1",
-      "need_wait_window": false,
-      "need_wait_time": 1000,
-      "locate_node": {
-        "find_texts": [
-          "锁屏和密码",
-          "Screen lock & passwords"
-        ]
+      "id":1016,
+      "describe":"打开设备管理器权限(6.0系统)",
+      "need_wait_window":false,
+      "need_wait_time":1000,
+      "locate_node":{
+        "id_name":"com.android.settings:id/action_button",
+        "class_name":"android.widget.Button"
       },
-      "scroll_node": {
-        "class_name": "android.widget.ScrollView"
-      },
-      "operation_node": {
-        "behavior": "click"
+      "operation_node":{
+        "behavior":"click"
       }
     },
     {
-      "id": 7007,
-      "describe": "打开锁屏与密码2",
-      "need_wait_window": false,
-      "need_wait_time": 1000,
-      "locate_node": {
-        "item_index": "0",
-        "id_name": "androidhwext:id/preference_emui_root",
-        "class_name": "android.widget.FrameLayout"
+      "id":1017,
+      "describe":"打开获取应用活动信息权限(6.0系统)",
+      "need_wait_window":true,
+      "need_wait_time":1000,
+      "locate_node":{
+        "id_name":"com.android.settings:id/switchWidget",
+        "class_name":"android.widget.Switch"
       },
-      "operation_node": {
-        "behavior": "click"
+      "operation_node":{
+        "behavior":"click"
       }
     },
     {
-      "id": 1014,
-      "describe": "打开获取应用活动信息权限(6.0系统)",
-      "need_wait_window": true,
-      "need_wait_time": 3000,
-      "locate_node": {
-        "find_texts": [
-          "testFingerPrint"
-        ]
+      "id":1018,
+      "describe":"打开获取应用活动信息权限(xiaomi v8)",
+      "need_wait_window":true,
+      "need_wait_time":1000,
+      "locate_node":{
+        "id_name":"android:id/checkbox",
+        "class_name":"android.widget.CheckBox"
       },
-      "scroll_node": {
-        "class_name": "android.widget.ListView"
-      },
-      "operation_node": {
-        "behavior": "click"
+      "operation_node":{
+        "behavior":"click"
       }
     },
     {
-      "id": 1015,
-      "describe": "打开获取应用活动信息权限(6.0系统)",
-      "need_wait_window": true,
-      "need_wait_time": 1000,
-      "locate_node": {
-        "id_name": "android:id/switchWidget",
-        "class_name": "android.widget.Switch"
+      "id":1019,
+      "describe":"打开获取应用活动信息权限(7.0系统)",
+      "need_wait_window":true,
+      "need_wait_time":1000,
+      "locate_node":{
+        "id_name":"android:id/switch_widget",
+        "class_name":"android.widget.Switch"
       },
-      "operation_node": {
-        "behavior": "click"
-      }
-    },
-    {
-      "id": 1016,
-      "describe": "打开设备管理器权限(6.0系统)",
-      "need_wait_window": false,
-      "need_wait_time": 1000,
-      "locate_node": {
-        "id_name": "com.android.settings:id/action_button",
-        "class_name": "android.widget.Button"
-      },
-      "operation_node": {
-        "behavior": "click"
+      "operation_node":{
+        "behavior":"click"
       }
     }
   ]

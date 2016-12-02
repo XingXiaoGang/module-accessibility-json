@@ -51,7 +51,7 @@ public class TasksParser extends JsonParser<TasksParser.TasksResult> {
                         tasksResult.version = reader.nextInt();
                         break;
                     }
-                    case "task_items": {
+                    case "rule_items": {
                         reader.beginArray();
                         while (reader.hasNext()) {
                             TaskInfo info = GSON.fromJson(reader, TaskInfo.class);

@@ -1,116 +1,112 @@
 {
   "version": 3,
-  "intent_items": [
+  "intent_items":[
     {
-      "id": 1,
-      "describe": "打开悬浮窗设置界面(xiaomi v6 v7)",
-      "package": "com.miui.securitycenter",
-      "activity": "com.miui.permcenter.permissions.AppPermissionsEditorActivity",
-      "extra": "extra_pkgname=com.example.xingxiaogang.testfingerprint"
+      "id":1,
+      "describe":"打开悬浮窗设置界面(xiaomi v6 v7)",
+      "package":"com.miui.securitycenter",
+      "activity":"com.miui.permcenter.permissions.AppPermissionsEditorActivity",
+      "extra":"extra_pkgname=com.example.xingxiaogang.testfingerprint"
     },
     {
-      "id": 2,
-      "action": "android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS",
-      "package": "com.android.settings"
+      "id":2,
+      "action":"android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS",
+      "package":"com.android.settings"
     },
     {
-      "id": 3,
-      "describe": "打开照相机权限开启界面(xiaomi v6 v7)",
-      "package": "com.miui.securitycenter",
-      "activity": "com.miui.permcenter.permissions.AppPermissionsEditorActivity",
-      "extra": "extra_pkgname=com.example.xingxiaogang.testfingerprint"
+      "id":3,
+      "describe":"打开照相机权限开启界面(xiaomi v6 v7)",
+      "package":"com.miui.securitycenter",
+      "activity":"com.miui.permcenter.permissions.AppPermissionsEditorActivity",
+      "extra":"extra_pkgname=com.example.xingxiaogang.testfingerprint"
     },
     {
-      "id": 4,
-      "describe": "打开获取应用活动信息权限界面(samsung 5.0以上)",
-      "package": "com.android.settings",
-      "action": "android.settings.USAGE_ACCESS_SETTINGS"
+      "id":4,
+      "describe":"打开获取应用活动信息权限界面(samsung 5.0以上)",
+      "package":"com.android.settings",
+      "action":"android.settings.USAGE_ACCESS_SETTINGS"
     },
     {
-      "id": 5,
-      "describe": "打开悬浮窗设置界面(xiaomi v5)",
-      "package": "com.android.settings",
-      "data": "package:com.example.xingxiaogang.testfingerprint",
-      "action": "android.settings.APPLICATION_DETAILS_SETTINGS"
+      "id":5,
+      "describe":"打开悬浮窗设置界面(xiaomi v5)",
+      "package":"com.android.settings",
+      "data":"package:com.example.xingxiaogang.testfingerprint",
+      "action":"android.settings.APPLICATION_DETAILS_SETTINGS"
     },
     {
-      "id": 6,
-      "describe": "打开悬浮窗设置界面(华为EMUI 3.0)",
-      "package": "com.huawei.systemmanager",
-      "activity": "com.huawei.notificationmanager.ui.NotificationManagmentActivity"
+      "id":6,
+      "describe":"打开悬浮窗设置界面(华为EMUI 3.0)",
+      "package":"com.huawei.systemmanager",
+      "activity":"com.huawei.notificationmanager.ui.NotificationManagmentActivity"
     },
     {
-      "id": 7,
-      "describe": "打开照相机权限设置界面(华为EMUI 3.0)",
-      "package": "com.huawei.systemmanager",
-      "activity": "com.huawei.permissionmanager.ui.MainActivity"
+      "id":7,
+      "describe":"打开照相机权限设置界面(华为EMUI 3.0)",
+      "package":"com.huawei.systemmanager",
+      "activity":"com.huawei.permissionmanager.ui.MainActivity"
     },
     {
-      "id": 8,
-      "describe": "打开OPPOV1.4照相机权限界面",
-      "package": "com.oppo.safe",
-      "activity": "com.oppo.safe.permission.PermissionAppListActivity"
+      "id":8,
+      "describe":"打开OPPOV1.4照相机权限界面",
+      "package":"com.oppo.safe",
+      "activity":"com.oppo.safe.permission.PermissionAppListActivity"
     },
     {
-      "id": 9,
-      "describe": "打开OPPOV1.4照相机权限界面",
-      "package": "com.oppo.safe",
-      "activity": "com.oppo.safe.permission.PermissionSettingsActivity"
+      "id":9,
+      "describe":"打开OPPOV1.4照相机权限界面",
+      "package":"com.oppo.safe",
+      "activity":"com.oppo.safe.permission.PermissionSettingsActivity"
     },
     {
-      "id": 10,
-      "describe": "打开MIUI开发者选项界面",
-      "package": "com.android.settings",
-      "action": "android.settings.APPLICATION_DEVELOPMENT_SETTINGS"
+      "id":10,
+      "describe":"打开MIUI开发者选项界面",
+      "package":"com.android.settings",
+      "action":"android.settings.APPLICATION_DEVELOPMENT_SETTINGS"
     },
     {
-      "id": 101,
-      "describe": "添加纯净后台白名单(oppo v1.4)",
-      "package": "com.oppo.purebackground",
-      "activity": "com.oppo.purebackground.PurebackgroundTopActivity"
+      "id":101,
+      "describe":"添加纯净后台白名单(oppo v1.4)",
+      "package":"com.oppo.purebackground",
+      "activity":"com.oppo.purebackground.PurebackgroundTopActivity"
     },
     {
-      "id": 102,
-      "describe": "打开悬浮窗设置界面(华为EMUI 3.1)",
-      "package": "com.huawei.systemmanager",
-      "activity": "com.huawei.systemmanager.addviewmonitor.AddViewMonitorActivity"
+      "id":102,
+      "describe":"打开悬浮窗设置界面(华为EMUI 3.1)",
+      "package":"com.huawei.systemmanager",
+      "activity":"com.huawei.systemmanager.addviewmonitor.AddViewMonitorActivity"
     },
     {
-      "id": 103,
-      "describe": "打开自启设置界面(华为EMUI 3.1)",
-      "package": "com.huawei.systemmanager",
-      "activity": "com.huawei.systemmanager.optimize.bootstart.BootStartActivity"
+      "id":103,
+      "describe":"打开自启设置界面(华为EMUI 3.1)",
+      "package":"com.huawei.systemmanager",
+      "activity":"com.huawei.systemmanager.optimize.bootstart.BootStartActivity"
     },
     {
-      "id": 104,
-      "describe": "emui4.0打开信任权限step1",
-      "package": "com.android.settings",
-      "data": "package:com.example.xingxiaogang.testfingerprint",
-      "action": "android.settings.APPLICATION_DETAILS_SETTINGS"
+      "id":104,
+      "describe":"emui4.0打开信任权限",
+      "package":"com.android.settings",
+      "package1":"com.huawei.systemmanager",
+      "package2":"com.android.packageinstaller",
+      "activity":"com.huawei.permissionmanager.ui.MainActivity"
     },
     {
-      "id": 105,
-      "describe": "emui4.0打开锁屏与密码",
-      "package": "com.android.settings",
-      "action": "android.settings.SETTINGS"
+      "id":105,
+      "describe":"emui4.0打开锁屏与密码",
+      "package":"com.android.settings",
+      "action":"android.settings.SETTINGS"
     },
     {
-      "id": 106,
-      "describe": "打开设备管理器",
-      "package": "com.android.settings",
-      "action": "android.app.action.ADD_DEVICE_ADMIN"
+      "id":106,
+      "describe":"打开设备管理器",
+      "package":"com.android.settings",
+      "action":"android.app.action.ADD_DEVICE_ADMIN"
     },
     {
-      "id": 107,
-      "describe": "emui4.0打开信任权限step2",
-      "package": "com.huawei.systemmanager",
-      "data": "package:com.example.xingxiaogang.testfingerprint"
-    },
-    {
-      "id": 108,
-      "describe": "emui4.0打开信任权限step3",
-      "package": "com.android.packageinstaller",
-      "data": "package:com.example.xingxiaogang.testfingerprint"
+      "id":107,
+      "describe":"打开悬浮窗设置界面(xiaomi v8)",
+      "package":"com.miui.securitycenter",
+      "activity":"com.miui.permcenter.permissions.PermissionsEditorActivity",
+      "extra":"extra_pkgname=com.example.xingxiaogang.testfingerprint"
     }
   ]
 }
