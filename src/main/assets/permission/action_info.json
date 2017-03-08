@@ -7,7 +7,7 @@
       "describe":"打开通知栏权限",
       "need_wait_window":true,
       "locate_node":{
-        "find_texts":["Super Locker"]
+        "find_texts":["辅助操作测试"]
       },
       "scroll_node":{
         "class_name":"android.widget.ListView"
@@ -65,7 +65,7 @@
       "describe":"打开获取应用活动信息权限",
       "need_wait_window":true,
       "locate_node":{
-        "find_texts":["Super Locker"]
+        "find_texts":["辅助操作测试"]
       },
       "scroll_node":{
         "class_name":"android.widget.ListView"
@@ -181,7 +181,7 @@
       "describe":"打开照相机权限",
       "need_wait_window":true,
       "locate_node":{
-        "find_texts":["Super Locker"]
+        "find_texts":["辅助操作测试"]
       },
       "scroll_node":{
         "class_name":"android.widget.ListView"
@@ -219,7 +219,7 @@
       "need_wait_time":3000,
       "locate_node":{
         "item_index":"1",
-        "find_texts":["Super Locker"]
+        "find_texts":["辅助操作测试"]
       },
       "scroll_node":{
         "class_name":"android.widget.ListView"
@@ -308,7 +308,7 @@
       "need_wait_window":true,
       "need_wait_time":3000,
       "locate_node":{
-        "find_texts":["Super Locker"]
+        "find_texts":["辅助操作测试"]
       },
       "scroll_node":{
         "class_name":"android.widget.ListView"
